@@ -1,6 +1,6 @@
 var price , crust_price, topping_price ;
 let total = 0;
-function Getpizza( name,size,crust,topping, total ){
+function Getart( name,size,crust,topping, total ){
   this.name = name;
   this.size = size;
   this.crust = crust;
@@ -30,17 +30,53 @@ $(document).ready(function(){
     case "0":
       price =0;
     break;
-    case "large":
-       price = 1200;
-       console.log(price);
-     break;
-     case "medium":
-       price = 850;
-       console.log("The price is "+price);
-     break;
-     case "small":
-       price = 600;
-       console.log(price);
+       case "art1":
+         price = 7000;
+         console.log(price);
+       break;
+       case "art2":
+         price = 8000;
+         console.log(price);
+       break;
+       case "art3":
+           price = 7000;
+           console.log(price);
+       break;
+       case "art4":
+         price = 6000;
+         console.log(price);
+      break;
+      case "art5":
+          price = 10000;
+          console.log(price);
+      break;
+      case "art6":
+          price = 5000;
+          console.log(price); 
+      break;
+      case "art7":
+          price = 6500;
+          console.log(price);
+      break;
+      case "art8":
+          price = 4000;
+          console.log(price);  
+      break;
+      case "art9":
+          price = 5000;
+          console.log(price);
+      break; 
+      case "art10":
+          price = 8000;
+          console.log(price);
+      break;
+      case "art11":
+          price = 5000;
+          console.log(price);
+      break;
+      case "art12":
+          price = 6000;
+          console.log(price);
      default:
        console.log("error"); 
    }
@@ -48,14 +84,14 @@ $(document).ready(function(){
       case "0":
         crust_price = 0;
       break;
-      case "Crispy":
-        crust_price = 200;
+      case "Nairobi cbd":
+        crust_price = 500;
       break;
-      case "Stuffed":
-        crust_price = 250;
+      case "Other places in Nairobi":
+        crust_price = 1000;
       break;
-      case "Gluten-free":
-        crust_price = 180;
+      case "Outside Nairobi":
+        crust_price = 1500;
       break;
       default:
         console.log("No price"); 
@@ -68,7 +104,7 @@ $(document).ready(function(){
       $("button.proceed").show();
       $("#information").show();
       $("div.choise").hide();
-      alert("Please select pizza size and crust"); 
+      alert("Please select art size and crust"); 
     }
     else{
       $("button.proceed").hide();
@@ -81,14 +117,14 @@ $(document).ready(function(){
     let checkoutTotal =0;
     checkoutTotal = checkoutTotal + total;
 
-    $("#pizzaname").html($(".name option:selected").val());
-    $("#pizzasize").html( $("#size option:selected").val());
-    $("#pizzacrust").html($("#crust option:selected").val());
-    $("#pizzatopping").html(ptopping.join(", "));
+    $("#artname").html($(".name option:selected").val());
+    $("#artsize").html( $("#size option:selected").val());
+    $("#artcrust").html($("#crust option:selected").val());
+    $("#arttopping").html(ptopping.join(", "));
     $("#totals").html(total);
     
-// Add pizza button
-    $("button.addPizza").click(function(){
+// Add art button
+    $("button.addart").click(function(){
       let pname = $(".name option:selected").val();
       let psize = $("#size option:selected").val();
       let pcrust = $("#crust option:selected").val();
@@ -101,16 +137,52 @@ $(document).ready(function(){
         case "0":
           price =0;
         break;
-        case "large":
-           price = 1200;
+        case "art1":
+           price = 7000;
            console.log(price);
          break;
-         case "medium":
-           price = 850;
+         case "art2":
+           price = 8000;
            console.log("The price is "+price);
          break;
-         case "small":
-           price = 600;
+         case "art3":
+          price = 7000;
+          console.log("The price is "+price);
+        break;
+        case "art4":
+          price = 6000;
+          console.log("The price is "+price);
+        break;
+        case "art5":
+          price = 10000;
+          console.log("The price is "+price);
+        break;
+        case "art6":
+          price = 5000;
+          console.log("The price is "+price);
+        break;
+        case "art7":
+          price = 6500;
+          console.log("The price is "+price);
+        break;
+        case "art8":
+          price = 4000;
+          console.log("The price is "+price);
+        break;
+        case "art9":
+          price = 4000;
+          console.log("The price is "+price);
+        break;
+        case "art10":
+          price = 8000;
+          console.log("The price is "+price);
+        break;
+        case "art11":
+          price = 5000;
+          console.log("The price is "+price);
+        break;
+         case "art12":
+           price = 6000;
            console.log(price);
          default:
            console.log("error"); 
@@ -119,14 +191,14 @@ $(document).ready(function(){
           case "0":
             crust_price = 0;
           break;
-          case "Crispy":
-            crust_price = 200;
+          case "Nairobi cbd":
+            crust_price = 500;
           break;
-          case "Stuffed":
-            crust_price = 150;
+          case "Other places in Nairobi":
+            crust_price = 1000;
           break;
-          case "Gluten-free":
-            crust_price = 180;
+          case "Outside Nairobi":
+            crust_price = 1500;
           break;
           default:
             console.log("No price"); 
@@ -139,9 +211,9 @@ $(document).ready(function(){
         checkoutTotal = checkoutTotal + total;
         console.log(checkoutTotal);
       // constractor function
-      var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
+      var newOrder = new Getart(pname, psize, pcrust,ptopping,total);
 
-      $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+      $("#ordersmade").append('<tr><td id="artname">'+newOrder.name +'</td><td id="artsize">' + newOrder.size + '</td><td id="artcrust">'+newOrder.crust + '</td><td id="arttopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
       console.log(newOrder);
       
       
@@ -150,21 +222,21 @@ $(document).ready(function(){
     // Checkout button
     $("button#checkout").click(function(){ 
       $("button#checkout").hide();
-      $("button.addPizza").hide();
+      $("button.addart").hide();
       $("button.deliver").slideDown(1000);
       $("#addedprice").slideDown(1000);
       console.log("Your total bills is sh. "+checkoutTotal);
-      $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
+      $("#arttotal").append("Your bill is sh. "+checkoutTotal);
     });
 
     // home delivery button
     $("button.deliver").click(function(){
-      $(".pizzatable").hide();
+      $(".arttable").hide();
       $(".choise h2").hide();
       $(".delivery").slideDown(1000);
       $("#addedprice").hide();
       $("button.deliver").hide();
-      $("#pizzatotal").hide();
+      $("#arttotal").hide();
       let deliceryamount= checkoutTotal+150;
       console.log("You will pay sh. "+deliceryamount+" on delivery");
       $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
@@ -174,7 +246,7 @@ $(document).ready(function(){
     $("button#final-order").click(function(event){
       event.preventDefault();
 
-      $("#pizzatotal").hide();
+      $("#arttotal").hide();
       $(".delivery").hide();
       $("button#final-order").hide();
       let deliceryamount= checkoutTotal+150;
