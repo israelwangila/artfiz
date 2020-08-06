@@ -301,7 +301,7 @@ $(document).ready(function () {
       $("#addedprice").hide();
       $("button.deliver").hide();
       $("#arttotal").hide();
-      let deliceryamount = checkoutTotal + 150;
+      let deliceryamount = checkoutTotal;
       console.log("You will pay sh. " + deliceryamount + " on delivery");
       $("#totalbill").append("Your bill plus delivery fee is: " + deliceryamount);
     });
@@ -313,7 +313,7 @@ $(document).ready(function () {
       $("#arttotal").hide();
       $(".delivery").hide();
       $("button#final-order").hide();
-      let deliceryamount = checkoutTotal + 150;
+      let deliceryamount = checkoutTotal ;
       console.log("Final Bill is: " + deliceryamount);
       let person = $("input#name").val();
       let phone = $("input#phone").val();
