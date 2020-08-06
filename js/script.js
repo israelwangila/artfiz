@@ -75,39 +75,39 @@ $(document).ready(function () {
         console.log(price);
         break;
       case "art12":
-        price = 5000;
+        price = 6000;
         console.log(price);
         break;
       case "art13":
-        price = 5000;
+        price = 8000;
         console.log(price);
         break;
       case "art14":
-        price = 5000;
+        price = 8000;
         console.log(price);
         break;
       case "art15":
-        price = 5000;
+        price = 6000;
         console.log(price);
         break;
       case "art16":
-        price = 5000;
+        price = 8000;
         console.log(price);
         break;
       case "art17":
-        price = 5000;
+        price = 7000;
         console.log(price);
         break;
       case "art18":
-        price = 5000;
+        price = 8000;
         console.log(price);
         break;
       case "art19":
-        price = 5000;
+        price = 9000;
         console.log(price);
         break;
       case "art20":
-        price = 6000;
+        price = 8000;
         console.log(price);
       default:
         console.log("error");
@@ -211,10 +211,42 @@ $(document).ready(function () {
           break;
         case "art11":
           price = 5000;
-          console.log("The price is " + price);
+          console.log(price);
           break;
         case "art12":
           price = 6000;
+          console.log(price);
+          break;
+        case "art13":
+          price = 8000;
+          console.log(price);
+          break;
+        case "art14":
+          price = 8000;
+          console.log(price);
+          break;
+        case "art15":
+          price = 6000;
+          console.log(price);
+          break;
+        case "art16":
+          price = 8000;
+          console.log(price);
+          break;
+        case "art17":
+          price = 7000;
+          console.log(price);
+          break;
+        case "art18":
+          price = 8000;
+          console.log(price);
+          break;
+        case "art19":
+          price = 9000;
+          console.log(price);
+          break;
+        case "art20":
+          price = 8000;
           console.log(price);
         default:
           console.log("error");
